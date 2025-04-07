@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.poppyred.mapper.MenuMapper">
+
+	<insert id="saveMenu">
+		insert into tbl_menu(pro_code, pro_name, pro_price,
+		pro_contents) values (#{pro_code}, #{pro_name}, #{pro_price},
+		#{pro_contents})
+	</insert>
+	<select id="getMenu" resultType="com.poppyred.domain.MenuVo">
+		select * from tbl_menu
+	</select>
+	<select id="getMenuDrink"
+		resultType="com.poppyred.domain.MenuVo">
+		<![CDATA[
+		select * from tbl_menu where pro_code like 'dr%'
+		]]>
+	</select>
+	<select id="getMenuDesert"
+		resultType="com.poppyred.domain.MenuVo">
+		<![CDATA[
+		select * from tbl_menu where pro_code like 'de%'
+		]]>
+	</select>
+	<select id="getMenuGoods"
+		resultType="com.poppyred.domain.MenuVo">
+		<![CDATA[
+		select * from tbl_menu where pro_code like 'g%'
+		]]>
+	</select>
+	<select id="getBest" resultType="com.poppyred.domain.MenuVo">
+	<![CDATA[
+		select * from (select m.pro_code, m.pro_name, m.pro_price, m.pro_contents 
+		from tbl_menu m, tbl_review r where m.pro_code=r.pro_code group by m.pro_code, m.pro_name, m.pro_price, m.pro_contents 
+		order by count(r.bno) desc) where rownum<=7
+	]]>
+	</select>
+</mapper>

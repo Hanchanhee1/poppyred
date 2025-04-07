@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+.savemenu {
+	
+}
+
+.well .inputbookinfo, .savelist{
+	margin-top: 30px;
+}
+
+.well .bcontent-textarea {
+	resize: none;
+	width: 50%;
+	height: 200px;
+}
+
+.well .list {
+	margin-right: 20px;
+	display: inline-block;
+}
+
+.well .menu-image {
+	width: 250px;
+	height: 320px;
+	margin-bottom: 10px;
+}
+
+.well .bcontent {
+	display: -webkit-box;
+	-webkit-line-clamp: 6; 
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.well .form-group {
+	margin-bottom:10px;
+}
+
+.form-group.preview {
+    margin-left: -120px;
+}
+
+.input {
+	position:relative;
+	margin:20px auto;
+	font-weight: bold;
+	width:20%;
+	height: 60px; 
+	background-color: #fff; 
+	border: 2px solid #000;
+	border-radius:70px;
+}
+
+.input:hover {
+	color: #fff;
+	border: 2px solid #E84845;
+	background-color: #E84845;
+	transition: 0.5s;
+}

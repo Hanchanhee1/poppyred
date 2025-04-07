@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.poppyred.mapper.QnaMapper">
+	<insert id="qnaSave">
+		insert into tbl_qna (id, pro_code, contents, rdate, bno) values (#{id},#{pro_code},#{contents},sysdate, qna_seq.nextval)
+	</insert>
+	<select id="getQna" resultType="com.poppyred.domain.QnaVo">
+		select id,pro_code,contents,answer,to_char(sysdate,'YYYY-MM-DD') as rdate, bno, to_char(anrdate,'YYYY-MM-DD') as anrdate from tbl_qna where pro_code = #{pro_code} order by bno asc
+	</select>
+	<update id="answerUpdate">
+		update tbl_qna set answer=#{answer}, anrdate= sysdate where pro_code = #{pro_code} and bno = #{bno}
+	</update>
+</mapper>

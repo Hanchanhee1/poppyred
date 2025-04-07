@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+.select_menu {
+	position:relative;
+	display:flex;
+	flex-direction:row;
+	width:346px;
+	margin:0 auto;
+	font-size:24px;
+	font-weight:800;
+}
+.title {
+	position:relative;
+	font-weight:800;
+	font-size:30px;
+	text-align:center;
+	margin-top:5%;
+	margin-bottom:7%;
+}
+.event_content .event_box {
+	display:inline-block;
+	position:relative;
+	width:320px;
+	height:400px;
+	margin:0 20px;
+    border-radius: 200px; /* 모서리를 둥글게 만듭니다. */
+    border-bottom-left-radius: 20px; /* 좌측 위 모서리를 각지게 만듭니다. */
+    border-bottom-right-radius: 20px; /* 우측 위 모서리를 각지게 만듭니다. */
+    overflow:hidden;
+    background-color:#fff;
+}
+.event_content .event_price {
+	position:relative;
+	text-align:center;
+	margin-bottom:2%;
+	font-weight:800;
+	font-size:22px;
+	text-align:center;
+}
+.event_content #price {
+	color:pink;
+	font-size:18px;
+}
+
+.btn2 {
+	position:relative;
+	margin:20px auto;
+	font-weight: bold;
+	width:7%;
+	left:80%;
+	height: 60px; 
+	background-color: #fff; 
+	border: 2px solid #000;
+	border-radius:70px;
+}

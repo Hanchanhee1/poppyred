@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+h2 {
+	font-weight: bold;
+}
+
+.others {
+  display: table;
+}
+
+.idfind {
+	padding-right:38px;
+}
+
+.pwfind {
+	padding-right:38px;
+}
+
+.v-line {
+	padding-right:38px;
+}

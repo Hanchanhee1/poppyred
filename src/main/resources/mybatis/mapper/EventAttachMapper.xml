@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.poppyred.mapper.EventAttachMapper">
+
+<insert id="insert">
+	insert into tbl_eventattach (uuid,uploadpath,uploadfile,bno) values (#{uuid},#{uploadpath},#{uploadfile},#{bno})
+</insert>
+
+<select id="selectImage" resultType="com.poppyred.domain.EventAttachVo">
+	select * from tbl_eventattach where bno = #{bno}
+</select>
+
+<delete id="attachdelete">
+	delete from tbl_eventattach where bno = #{bno}
+</delete>
+
+<select id="attachlist">
+	select * from tbl_eventattach order by bno desc
+</select>
+
+</mapper>

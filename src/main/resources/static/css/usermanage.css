@@ -1,0 +1,18 @@
+@charset "UTF-8";
+.managebox {
+	margin:30px 0;
+	
+}
+.managebox .userid {
+	font-size:24px;
+	font-weight:700;
+}
+
+.managebox .userbox {
+	position:relative;
+	height:500px;
+}
+.managebox .userdelete {
+	text-align:center;
+	margin-top:7%;
+}

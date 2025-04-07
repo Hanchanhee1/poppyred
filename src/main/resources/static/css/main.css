@@ -1,0 +1,160 @@
+@charset "UTF-8";
+body		{ font-family: 'NanumSquare', sans-serif;}
+.btn:active, .btn:focus, .btn:hover {
+outline:none !important;
+box-shadow:none !important;
+background-color:transparent !important;
+}
+a {
+	text-decoration:none;
+	color:#000;
+}
+a:hover {
+	text-decoration:none;
+	color:#000;
+}
+.header {
+	margin:1% 0;
+	text-align:center;
+}
+.header #bar {
+	position:relative;
+	padding:0 35px;
+	font-weight: 800;
+	font-size:16px;
+}
+.header .user {
+	position:relative;
+	font-weight: 800;
+	font-size:16px;
+	padding:0 10px;
+}
+.header #login, #cart{
+	border-right:1px solid #ccc;
+}
+.first_box{
+	position:relative;
+}
+.thumbnail_bno {
+	position:absolute;
+	bottom:9%;
+	left:19%;
+}
+.thumbnail_bno #th_no {
+	position:absolute;
+	font-weight:800;
+	font-size:18px;
+	bottom:-5px;
+	right:75px;
+	color:#686868;
+}
+.second_box .choice_bar {
+	position:relative;
+	float:right;
+	right:123px;
+}
+.second_box .choice_bar .toggleBtn {
+	font-weight:600;
+	width:85px;
+	height:33px;
+	margin:10px 1px;
+	border:1px solid #686868;
+	border-radius:8px;
+	background-color:#fff;
+}
+.menu_scroll-container, .shop_scroll-container {
+	margin-top:7%;
+    position: relative;
+    width: 100%; /* 원하는 너비 */
+    height: 400px; /* 원하는 높이 */
+    overflow:hidden;
+    display:flex;
+    flex-direction:row;
+}
+.event_scroll-container {
+	margin-top:7%;
+	margin-bottom:10%;
+    position: relative;
+    width: 100%; /* 원하는 너비 */
+    height: 480px; /* 원하는 높이 */
+    overflow:hidden;
+    display:flex;
+    flex-direction:row;
+}
+
+.menu_scroll-content, .shop_scroll-content {
+    width: 2380px; /* 스크롤할 내용의 너비 */
+}
+.second_box #show_desert{
+	display:none;
+}
+.event_scroll-content {
+	width: 2190px;
+}
+
+.menu_prev, .shop_prev, .event_prev {
+	left:0;
+	width:60px; height:60px;
+	position:absolute;
+	top:45%;
+}
+.event_prev {
+	top:38%;
+}
+.menu_prev:hover, .shop_prev:hover, .event_prev:hover {
+	cursor: pointer;
+}
+.menu_next, .shop_next, .event_next {
+    right: 0;
+	width:60px; height:60px;
+	position:absolute;
+	float:right;
+	top:45%;
+}
+.event_next {
+	top:38%;
+}
+.menu_next:hover, .shop_next:hover, .event_next:hover {
+	cursor: pointer;
+}
+.mainpage .menu_box, .shop_box {
+	display:inline-block;
+	position:relative;
+	width:294px;
+	height:430px;
+	margin:0 20px;
+	border-radius:20px;
+    overflow:hidden;
+    background-color:#fff;
+}
+.mainpage .event_box {
+	display:inline-block;
+	position:relative;
+	width:320px;
+	height:470px;
+	margin:0 20px;
+    border-radius: 200px; /* 모서리를 둥글게 만듭니다. */
+    border-bottom-left-radius: 20px; /* 좌측 위 모서리를 각지게 만듭니다. */
+    border-bottom-right-radius: 20px; /* 우측 위 모서리를 각지게 만듭니다. */
+    overflow:hidden;
+    background-color:#fff;
+
+}
+.mainpage .menu_price, .shop_price, .event_price {
+	position:relative;
+	margin-top:10px;
+	font-weight:800;
+	font-size:22px;
+	text-align:center;
+}
+.mainpage #price {
+	color:pink;
+	font-size:18px;
+}
+.scroll_top {
+	position:fixed;
+	bottom:0;
+	right:0;
+	margin:30px;
+	z-index:999;
+}

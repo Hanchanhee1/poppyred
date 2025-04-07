@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.poppyred.mapper.HelpMapper">
+
+	<insert id="HelpInsert">
+		<selectKey keyProperty="bno" order="BEFORE" resultType="int">
+			select help_seq.nextval from dual
+		</selectKey>
+			insert into tbl_help (bno,title,contents,answer) values (#{bno},#{title},#{contents},#{answer})
+	</insert>
+	
+	<select id="HelpAllSelect" resultType="com.poppyred.domain.HelpVo">
+		select * from tbl_help order by bno desc
+	</select>
+	
+	<select id="HelpOneSelect" resultType="com.poppyred.domain.HelpVo">
+		select * from tbl_help where bno = #{bno}
+	</select>
+	
+	<select id="prevNotice" resultType="com.poppyred.domain.HelpVo">
+	<![CDATA[
+		select * from tbl_help where bno = (select max(bno) from tbl_help where bno < #{bno})
+		]]>
+	</select>
+	
+	<select id="nextNotice" resultType="com.poppyred.domain.HelpVo">
+	<![CDATA[
+		select * from tbl_help where bno = (select min(bno) from tbl_help where bno > #{bno})
+		]]>
+	</select>
+	
+	<update id="HelpUpdate">
+		update tbl_help set title = #{title}, contents = #{contents}, answer = #{answer} where bno = #{bno} 
+	</update>
+	
+	<delete id="HelpDelete">
+		delete tbl_help where bno = #{bno}
+	</delete>
+
+</mapper>

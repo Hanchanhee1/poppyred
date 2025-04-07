@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.poppyred.mapper.CartMapper">
+
+	<insert id="saveCart">
+		insert into tbl_cart values(#{id},#{pro_code},#{amount}, sysdate, #{tot_price})
+	</insert>
+	
+	<select id="cartList" resultType="com.poppyred.domain.CartVo">
+		select id, pro_code, amount, to_char(rdate,'yyyy-mm-dd') as rdate, tot_price from tbl_cart where id=#{id}
+	</select>
+	
+	<select id="findMenu" resultType="com.poppyred.domain.MenuVo">
+		select * from tbl_menu where pro_code = #{pro_code}
+	</select>
+	
+	<delete id="deleteCart">
+		delete from tbl_cart where pro_code=#{pro_code}
+	</delete>
+	
+	<delete id="deleteAllCart">
+		delete from tbl_cart where id=#{userid}
+	</delete>
+</mapper>

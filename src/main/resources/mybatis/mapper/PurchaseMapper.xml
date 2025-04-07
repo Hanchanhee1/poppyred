@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.poppyred.mapper.PurchaseMapper">
+	<insert id="buy">
+		insert into tbl_order values (order_seq.nextval,#{userid},sysdate, #{receiver},#{all_price},#{all_amount},#{delivery},#{address},#{pro_name})
+	</insert>
+	<select id="order">
+		select to_char(rdate,'YYYY-MM-DD') as rdate, pro_name, all_amount, all_price from tbl_order where id=#{id} order by order_bno desc
+	</select>
+</mapper>

@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+.purpage .address {
+	border:2px solid #ccc;
+	border-radius:5px;
+	padding:20px 15px;
+	padding:20px 15px;
+}
+.purpage .btn {
+	position:relative;
+	width:55%;
+	left:18%;
+}
+.purpage .mid {
+	margin:10% 0;
+}
+.purpage .mid .userinfo {
+	border:2px solid #ccc;
+	border-radius:5px;
+	padding:20px 15px;
+}
+.purpage .mid label {
+	padding:5px 0;
+}
+.purpage h4 {
+	display:inline-block;
+	margin-right:10px;
+}
+.purpage .list {
+	padding:20px 20px;
+	border-bottom:2px solid #ccc;
+}
+.purpage .box {
+	border:2px solid #ccc;
+	border-radius:10px;
+	width:60%; 
+	height:210px; 
+	padding:20px 30px; 
+	margin-left:100px;
+	margin-top:10%;
+}
+.purpage .total {
+	border-top:2px solid #ccc;
+	padding:10px 0;
+}
+.purpage .btn {
+	position:relative;
+	font-weight:800;
+	font-size:18px;
+	border:1px solid #000;
+	padding:10px 20px;
+	width:300px;
+}

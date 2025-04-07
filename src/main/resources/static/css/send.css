@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+.sendpage .mid .head {
+	text-align:center;
+	height:60px;
+	border-bottom:2px solid #ccc;
+	font-size:18px;
+}
+
+.sendpage .mid {
+	border-top:2px solid #ccc;
+	margin-bottom:10%;
+}
+.sendpage .mid .info {
+	border-left:1px solid #ccc;	
+}
+.sendpage .mid td {
+	text-align:center;
+	height:150px;
+}

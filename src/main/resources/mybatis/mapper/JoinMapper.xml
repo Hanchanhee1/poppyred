@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.poppyred.mapper.JoinMapper">
+
+   <insert id="save">
+      insert into tbl_user (id,email,pw,name,question,answer,role)
+      values(#{id},#{email},#{pw},#{name},#{question},#{answer},'user')
+   </insert>
+   
+   <select id="login" resultType="com.poppyred.domain.UserVo">
+      select * from tbl_user where id = #{id} and pw = #{pw}
+   </select>
+   
+   <select id="findById" resultType="com.poppyred.domain.UserVo">
+      select * from tbl_user where id = #{value}
+   </select>
+   <select id="pwfind" resultType="String">
+   	select pw from tbl_user where id=#{id} and question=#{question} and answer=#{answer}
+   </select>
+   
+   <delete id="deleteUser">
+   	delete from tbl_user where id=#{id} and pw=#{pw}
+   </delete>
+</mapper>

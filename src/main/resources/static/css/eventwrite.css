@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+h2 {
+	font-weight: bold;
+	float: left;
+	font-size: 36px;
+	padding-left: 26px;
+	margin: 80px 0 50px 0;
+}
+
+td, th {
+	float: left;
+	margin: 20px;
+}
+
+.writer, .title {
+	width:900px;
+	height: 50px;
+}
+
+.btn_wrap {
+	margin: 25px 100px 150px 100px;
+}

@@ -1,0 +1,27 @@
+@charset "UTF-8";
+.reviewpage {
+	margin-top:3%;
+}
+.reviewpage .reviewbox {
+	text-align:center;
+}
+.reviewpage .btn {
+	margin-bottom:27px;
+}
+.reviewpage .user {
+	position:relative;
+	right:35%;
+}
+.reviewpage .commentbox {
+	margin:8px 0;
+	text-align:center;
+}
+.reviewpage .comment {
+	left:13%;
+	top:15%;
+}
+.reviewpage .writeinfo {
+	right:10%;
+	top:10%;
+	text-align:left;
+}

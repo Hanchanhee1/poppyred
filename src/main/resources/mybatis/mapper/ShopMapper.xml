@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.poppyred.mapper.ShopMapper">
+	
+	<select id="getDetail" resultType="com.poppyred.domain.MenuVo">
+		select * from tbl_menu where pro_code=#{pro_code}
+	</select>
+	<insert id="ReviewSave">
+		insert into tbl_review(id,pro_code,contents,bno,rdate) values (#{id},#{pro_code},#{contents},review_seq.nextval,sysdate)
+	</insert>
+	<select id="getReview" resultType="com.poppyred.domain.ReviewVo">
+		select id,pro_code,contents,bno,to_char(sysdate,'YYYY-MM-DD') as rdate from tbl_review where pro_code = #{pro_code} order by bno desc
+	</select>
+	<delete id="getRemove">
+		delete from tbl_review where bno=#{com_no}
+	</delete>
+</mapper>

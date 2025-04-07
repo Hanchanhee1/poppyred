@@ -1,0 +1,30 @@
+@charset "UTF-8";
+.shop_detail {
+	margin-top:5%;
+}
+.shop_detail .top {
+	font-size:28px;
+	font-weight:800;
+	border-bottom:1px solid #ccc;
+}
+.shop_detail .mid {
+	padding-top:20px;
+	padding-bottom:10px;	
+	font-size:14px;
+	border-bottom:1px solid #ccc;
+}
+.shop_detail .bottom {
+	padding-top:10px;
+}
+.detail_tab .choice {
+	width:66%;
+	margin:0 auto;
+	height:45px;
+	margin-top:10%;
+}
+.detail_tab #detail_nav {
+	display:flex;
+	flex-direction:row;
+	font-weight:800;
+	
+}

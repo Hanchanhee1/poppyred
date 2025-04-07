@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.poppyred.mapper.MenuAttachMapper">
+
+	<insert id="insert">
+		insert into tbl_attachmenu(uuid, uploadpath, uploadfile, pro_code) values (#{uuid},#{uploadpath},#{uploadfile},#{pro_code})
+	</insert>
+	<select id="getPhoto" resultType="com.poppyred.domain.MenuAttachVo">
+		select * from tbl_attachmenu where pro_code = #{pro_code}
+	</select>
+</mapper>
